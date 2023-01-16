@@ -1,13 +1,15 @@
 import { Box, Typography } from "@mui/material";
-import { Stack } from "@mui/system";
 
 const About = () => {
 	return (
 		<div
 			style={{
-				background: "rgba(0,0,0,0.1)",
-				paddingTop: "30px",
+				background: `url('https://wallpaperaccess.com/full/1457949.jpg')`,
+				paddingTop: 20,
+				paddingBottom: 20,
+				color: "#fff",
 			}}
+			id="about"
 		>
 			<Typography
 				variant="h4"
@@ -16,34 +18,81 @@ const About = () => {
 				About
 			</Typography>
 			<Box padding={1}>
-				<Stack
-					direction="column"
-					spacing={3}
-					alignItems="center"
+				<Box
+					sx={{
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+						columnGap: 3,
+					}}
 				>
-					<Typography
-						variant="body2"
-						maxWidth={500}
+					<Box
+						sx={{
+							color: "#fff",
+							display: "flex",
+							flexDirection: "column",
+							rowGap: 2,
+							fontFamily: `'Sofia Sans Semi Condensed', sans-serif`,
+						}}
+						padding={1}
 					>
-						{`Lorem ipsum dolor sit amet, consectetur 
-                        adipiscing elit. Praesent vel faucibus lectus.
-                        Sed erat nibh, faucibus ac neque ultrices,
-                         sagittis blandit neque. Interdum et malesuada
-                         fames ac ante ipsum primis in faucibus.
-                          Maecenas a scelerisque est.
-                          Morbi non maximus orci, nec sagittis leo.
-                          Etiam dictum molestie malesuada. `}
-					</Typography>
-					<Typography
-						variant="body2"
-						maxWidth={500}
-					>{`Ut sollicitudin nunc enim, 
-                    id scelerisque magna congue in. In luctus quam ex, 
-                    id ultricies turpis imperdiet vel. Nullam convallis
-                     ultricies metus, sit amet suscipit lectus tempor ac. 
-                     Orci varius natoque penatibus et magnis 
-                    dis parturient montes, nascetur ridiculus mus.`}</Typography>
-				</Stack>
+						<Typography
+							variant="body2"
+							fontSize={20}
+							maxWidth={600}
+							sx={{
+								fontFamily: `'Sofia Sans Semi Condensed', sans-serif`,
+							}}
+						>
+							{`.(Our) Logistic is one of the most efficient transportation 
+                        to precede forward your business.
+                     Transportation was established in …. in response to great selection, 
+                    high quality for a reliable and price-competitive transport company
+                    and make transportation easy way
+. `}
+						</Typography>
+						<Typography
+							variant="body2"
+							fontSize={20}
+							maxWidth={600}
+							sx={{
+								fontFamily: `'Sofia Sans Semi Condensed', sans-serif`,
+							}}
+						>{`….. has mission and vision which can help your business solution, 
+                    delivery solution, express services, import and export services`}</Typography>
+						<Typography
+							variant="body2"
+							fontSize={20}
+							maxWidth={600}
+						>{`…  our service through our logistic save time , reduce your cost and increase
+                     reliability for your business. We were focusing on providing excellent transportation and 
+                     logistics solutions.
+                   `}</Typography>
+						<Typography
+							variant="body2"
+							fontSize={20}
+							maxWidth={600}
+						>{`Fast and safe transportation with team spirit, new technologies, 
+                    24/7 support is what we offer for your business
+                   The goal here is to maximize efficiency by focusing on
+                   core competencies, while at the same time minimizing procurement costs
+                   with the supply process.`}</Typography>
+					</Box>
+					<Box
+						sx={{
+							display: { xs: "none", md: "block" },
+						}}
+					>
+						<img
+							src="/forabout.jfif"
+							width={300}
+							style={{
+								objectFit: "cover",
+							}}
+							alt="about"
+						/>
+					</Box>
+				</Box>
 			</Box>
 		</div>
 	);

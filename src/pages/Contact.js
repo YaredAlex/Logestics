@@ -10,7 +10,6 @@ import {
 	AccountCircle,
 	Email,
 	Instagram,
-	LocalActivityRounded,
 	LocationCity,
 	Twitter,
 	WhatsApp,
@@ -20,12 +19,17 @@ const Contact = () => {
 	return (
 		<div
 			style={{
-				background: "#000",
+				background: "#2D2E2F",
 				padding: 10,
 				color: "#fff",
 			}}
 		>
-			<Typography textAlign={"center"}>Contact</Typography>
+			<Typography
+				textAlign={"center"}
+				variant="h4"
+			>
+				Contact
+			</Typography>
 			<Box>
 				<Stack
 					direction={{ md: "row", sm: "column" }}
@@ -34,7 +38,7 @@ const Contact = () => {
 				>
 					<Box>
 						<IconButton>
-							<Twitter color="primary" />
+							<Twitter color="#000" />
 							<Typography color={"#fff"}>Your twiter</Typography>
 						</IconButton>
 						<IconButton>

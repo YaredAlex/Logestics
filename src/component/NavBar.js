@@ -20,10 +20,9 @@ const NavBars = () => {
 	return (
 		<div>
 			<AppBar
-				color="transparent"
 				sx={{
-					background: "rgba(0,0,0,0.7)",
 					color: "#fff",
+					background: "#000",
 				}}
 			>
 				<Toolbar>
@@ -33,7 +32,7 @@ const NavBars = () => {
 						onChange={handleTabChange}
 						sx={{
 							display: { sm: "block", xs: "none" },
-							margin: "0 auto",
+							marginLeft: "auto",
 						}}
 						textColor="inherit"
 					>
@@ -41,6 +40,7 @@ const NavBars = () => {
 							<Tab
 								key={page}
 								label={page}
+								href={`#${page.toLowerCase()}`}
 							/>
 						))}
 					</Tabs>

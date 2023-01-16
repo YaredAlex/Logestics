@@ -18,11 +18,12 @@ const NavDrawer = ({ drawer, setDrawer }) => {
 				onOpen={() => setDrawer(true)}
 			>
 				<List>
-					{linkNavigation.map(page => (
-						<ListItem>
+					{linkNavigation.map((page, index) => (
+						<ListItem key={page + index}>
 							<ListItemButton
 								divider
 								href={`#${page.toLowerCase()}`}
+								onClick={() => setDrawer(false)}
 							>
 								<ListItemText primary={page} />
 							</ListItemButton>
